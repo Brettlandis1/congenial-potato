@@ -5,17 +5,37 @@ searches through the list of names and:
   print false if the name does not occur in the list
 '''
 
-playerNames = ["Scott", "Brett", "Matt", "Will", "Lambo", "Trevor"]
 
 # research how to access a list element 
-print("The first name in this list is: " + playerNames[0])
+
 
 def findPlayer(name):
+  
   print("Searching for name: " + name)
+  
+  playerNames = ["Scott", "Brett", "Matt", "Will", "Lambo", "Trevor"]
+  
+  print(playerNames)
+  
+  print("The first name in this list is: " + playerNames[0])
+  
+  playerNames = ["Scott", "Brett", "Matt", "Will", "Lambo", "Trevor"]
+  
+  for i in range(len(playerNames)):
+    if(name == playerNames[i]):
+      print('true')
+      return
+  print('false')
+   
+  
   # loop through the list 
+  
   # if the element is found in the list, print true
 
 
 # example output:
 findPlayer("Scott") # true
 findPlayer("Petro") # false
+
+
+  
