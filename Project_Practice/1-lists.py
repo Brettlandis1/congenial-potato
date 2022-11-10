@@ -6,18 +6,9 @@ searches through the list of names and:
 '''
 
 
-# research how to access a list element 
-
-
 def findPlayer(name):
   
   print("Searching for name: " + name)
-  
-  playerNames = ["Scott", "Brett", "Matt", "Will", "Lambo", "Trevor"]
-  
-  print(playerNames)
-  
-  print("The first name in this list is: " + playerNames[0])
   
   playerNames = ["Scott", "Brett", "Matt", "Will", "Lambo", "Trevor"]
   
@@ -28,11 +19,6 @@ def findPlayer(name):
   print('false')
    
   
-  # loop through the list 
-  
-  # if the element is found in the list, print true
-
-
 # example output:
 findPlayer("Scott") # true
 findPlayer("Petro") # false
