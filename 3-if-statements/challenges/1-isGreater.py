@@ -3,7 +3,6 @@ use an if block to determine which number is larger.
 Use al else block if they are both equal
 '''
 
-  
 def getGreaterInt(input1, input2):
   
   print("Comparing " + input1 + "vs" + input2)
