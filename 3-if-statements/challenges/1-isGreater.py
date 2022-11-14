@@ -3,19 +3,24 @@ use an if block to determine which number is larger.
 Use al else block if they are both equal
 '''
 
-  
+
 def getGreaterInt(input1, input2):
-  
-  print("Comparing " + input1 + "vs" + input2)
-  #if():
-  #elif():
-  #else:
-  
-# ========= example output ========= #
-getGreaterInt(10,2) # 10
 
-getGreaterInt(2,10) # still 10
+    print("Comparing", input1, "vs", input2)
 
-getGreaterInt(10,10) # theyre equal
+    # if():
+    if input1 > input2:
+        print('input1 is greater')
 
-  
+    # elif():
+    elif input1 < input2:
+        print('input1 is less')
+
+    # else:
+    else:
+        print('theyre equal')
+
+
+getGreaterInt(1, 2)
+getGreaterInt(2, 1)
+getGreaterInt(2, 2)
