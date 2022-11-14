@@ -10,10 +10,10 @@ Example:
 
 
 class Dog:
-    def __init__(self, name, age, weight):
-        self._name = name
-        self._age = age
-        self._weight = weight
+    def __init__(self, _name, _age, _weight):
+        self.name = _name
+        self.age = _age
+        self.weight = _weight
 
 
 # now cook up some functions and progrums to read the members of the class.
@@ -22,10 +22,10 @@ class Dog:
 dash = Dog("DASHIE", 3, 65)
 
 # this is how you acess the members to READ Them
-print(dash._name)
-print(dash._age)
-print(dash._weight)
+print(dash.name)
+print(dash.age)
+print(dash.weight)
 
 # you can even change them (Write them)
-dash._name = 'DASHER DASHER'
-print(dash._name)
+dash.name = 'DASHER DASHER'
+print(dash.name)
