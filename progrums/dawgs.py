@@ -54,3 +54,13 @@ print(bill.name)
 print(bill.age)
 print(bill.weight)
 print(bill.fightingAbility)
+
+#round 1
+#dexter vs dash
+print('dexter vs dash')
+print('the winner is....')
+#what'd I do wrong on this?????
+if Dawg(dexter > dash):
+    print('dexter')
+elif Dawg(dexter > dash):
+    print('dash')
