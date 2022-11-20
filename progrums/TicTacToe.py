@@ -1,21 +1,63 @@
-''' In this progrums I will create a TicTacToe game'''
+class TicTacToeBoard:
 
-# Introduction to the game
-def start():
- print('Hello, Welcome to TicTacToe')
-#Introducing yourself
+    pos1 = "  "
+    pos2 = "  "
+    pos3 = "  "
+    pos4 = "  "
+    pos5 = "  "
+    pos6 = "  "
+    pos7 = "  "
+    pos8 = "  "
+    pos9 = "  "
 
-player1 = 'player1'
-player2 = 'player2'
-print("Hello", player1, 'and', player2)
+    movesPlayed = 0
+    playerXTurn = True
+
+    def __init__(self):
+        self.displayBoard()
+
+    def displayBoard(self):
+        print(self.pos1 + "|" + self.pos2 + "|" + self.pos3)
+        print("--------")
+        print(self.pos4 + "|" + self.pos5 + "|" + self.pos6)
+        print("--------")
+        print(self.pos7 + "|" + self.pos8 + "|" + self.pos9)
+
+    def makeMove(self, position, character):
+        if position == 1:
+            self.pos1 = character
+        elif position == 2:
+            self.pos2 = character
+        elif position == 3:
+            self.pos3 = character
+        elif position == 4:
+            self.pos4 = character
+        elif position == 5:
+            self.pos5 = character
+        elif position == 6:
+            self.pos6 = character
+        elif position == 7:
+            self.pos7 = character
+        elif position == 8:
+            self.pos8 = character
+        elif position == 9:
+            self.pos9 = character
 
 
+board = TicTacToeBoard()
 
-#Variables
+while (board.movesPlayed < 10):
+    board.displayBoard()
 
-List = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-LetterX = ['x']
-LetterO = ['O']
+    if board.playerXTurn == True:
+        marker = 'X '
+        movePosition = int(input("Player X, where would you like to move"))
 
-#Guessing System
+    else:
+        marker = 'O '
+        movePosition = int(input("Player O, where would you like to move"))
 
+    board.movesPlayed += 1
+    board.makeMove(movePosition, marker)
+    # toggle a true false variable
+    board.playerXTurn = not board.playerXTurn
