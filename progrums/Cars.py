@@ -5,6 +5,7 @@ This is a Class Progrum to name different car makes, models, and year
 #class
 class Car:
   def __init__(self, make, model, gas_mileage, year):
+  
 #Attributes of car
     self.make = make
     self.model = model
@@ -34,6 +35,8 @@ print(Scott_car.model)
 print(Scott_car.gas_mileage)
 print(Scott_car.year)
 
+
+
 #Using if statement to see if you have enough gas to make the trip
 #bretts gas mileage
 if (Brett_car.gas_mileage >= 13):
@@ -44,9 +47,10 @@ else:
   if (Scott_car.gas_mileage >= 13):
     print('Scott has enough gas to make it')
   else:
-    print('Scott does not have enough gas to make it')
+    print('Scott does not have enough gas to make it') 
     #Dom gas mileage
-    if (Dom_car.gas_mileage >= 12):
+    if (Dom_car.gas_mileage >= 13):
       print('Dom has enough has to make it')
     else:
       print('Dom does not have enough gas to  make it')
+      
