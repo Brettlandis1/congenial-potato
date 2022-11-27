@@ -1,4 +1,4 @@
-from card import *
+from Card import *
 import random
 
 SUITS = ['spades', 'hearts', 'clubs', 'diamonds']
@@ -20,11 +20,17 @@ class Deck:
         print("Deck initialized")
 
     def printDeck(self):
-        for card in range(len(self.cards)):
-            self.cards[card].peek()
+        for card in self.cards:
+            print(card.__repr__())
 
     def shuffle(self):
-        selection = random.shuffle(self.cards)
+        #print("Shuffling cards.")
+        random.shuffle(self.cards)
+
+    def dealCard(self):
+        nextCard = self.cards.pop()
+        print("dealing card", nextCard.__repr__())
+        return nextCard
 
     def initSuit(self, suit):
         ''' return 13 cards of specific suit'''
