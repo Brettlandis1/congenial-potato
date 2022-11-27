@@ -1,6 +1,6 @@
 from lists import *
 
-class TestClass:
+class TestLists:
   
   def test_find_player_type(self):
     assert type(findPlayer('Scott')).__name__ == 'bool'
