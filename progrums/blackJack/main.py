@@ -1,36 +1,21 @@
-import random
-from card import *
-from deck import *
-
-
-def getScore(hand):
-    score = 0
-    for i in range(len(hand)):
-        score += hand[i].value
-
-    return score
-
+from Card import *
+from Deck import *
+from Player import *
+from Dealer import *
 
 deck1 = Deck()
-# deck1.printDeck()
-print("Shuffling cards.")
 deck1.shuffle()
-deck1.printDeck()
 
-# print(len(deck1.cards))
+player = Player("Scott", 100)
+dealer = Dealer()
 
-# deal 2 cards
-playerCards = [deck1.cards.pop(), deck1.cards.pop()]
-dealerCards = [deck1.cards.pop(), deck1.cards.pop()]
+currentWager = player.makeWager()
+print(currentWager)
 
-# print(len(deck1.cards))
+player.cards = [deck1.cards.pop(), deck1.cards.pop()]
+dealer.cards = [deck1.cards.pop(), deck1.cards.pop()]
 
-# get values
-playerScore = getScore(playerCards)
-dealerScore = getScore(dealerCards)
+player.calculateScore()
+dealer.calculateScore()
 
-print(playerCards)
-print(dealerCards)
-
-print(playerScore)
-print(dealerScore)
+player.playHand()

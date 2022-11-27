@@ -5,6 +5,6 @@ class Card:
         self.suit = _suit
         self.cardtype = _cardtype
 
-    def peek(self):
+    def __repr__(self):
         '''print card details'''
-        print(self.id, self.value, self.suit, self.cardtype)
+        return f'Card(id={self.id} value={self.value} suit={self.suit} cardtype={self.cardtype})'
