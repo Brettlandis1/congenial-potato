@@ -6,7 +6,7 @@ The except block lets you handle the error.
 
 # this wont work since we never made a variable "xValue"
 try:
-  print(xValue)
+  print('xValue')
 
 # since there is an error, we can fix it in the except block
 except:
