@@ -12,10 +12,9 @@ class CardHand:
         print("Initialized", self.__repr__())
 
     def __repr__(self):
-        return f'CardHand(cards={self.cards} score={self.score} isDealer={self.isDealer})'
+        return f'CardHand(cards={self.cards} name={self.name} score={self.score} isDealer={self.isDealer})'
 
     def calculateScore(self):
-        print("calculating score for", self.name)
         self.score = 0
         for card in self.cards:
             print(card.__repr__())
@@ -24,3 +23,6 @@ class CardHand:
 
         print("Player", self.name, "score:", self.score)
         return self.score
+
+    def hit(self, newCard):
+        self.cards.append(newCard)

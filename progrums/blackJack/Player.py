@@ -15,35 +15,53 @@ class Player(CardHand):
         self.move = None
         super().__init__(_name, False)
 
+    def __repr__(self):
+        return f'Player(name={self.name} money={self.money} move={self.move})'
+
     def makeWager(self):
         print("You have", self.money, "$")
-        wagerAmount = int(input("What is your wager?"))
+        wagerAmount = float(input("What is your wager? "))
 
         # make sure they have enough money
-        if(wagerAmount <= self.money):
-            return wagerAmount
-
-        else:
+        if(wagerAmount > self.money):
             print("You do not have enough money to make that wager!")
             # run it again
             self.makeWager()
 
-    def playHand(self):
-        move = input("What is your move? ").lower()
+        # once the amount is legal return it
+        print("You wagered $", wagerAmount)
+        return wagerAmount
 
-        if(move == 'h'):
+    def decideMove(self):
+
+        self.calculateScore()
+
+        if(self.score > 21):
+            self.move = "busted"
+            print("BUST")
+            return self.move
+
+        moveInput = input("What is your move? ").lower()
+
+        if(moveInput == 'h'):
             self.move = "hit"
+            return self.move
 
-        elif(move == 's'):
+        elif(moveInput == 's'):
             self.move = "stay"
+            return self.move
 
         else:
             print("Invalid move. Please select from", VALID_MOVES)
             # recursion! We can run this funtion again from inside of itself.
             # way cleaner than a loop
+            self.move = 'INVALID'
             self.playHand()
 
         '''note: future feature
         # elif(move == 'sp'):
             self.move = "split"
         '''
+
+    def printMoney(self):
+        print("Current money: " + str(self.money))

@@ -27,6 +27,11 @@ class Deck:
         #print("Shuffling cards.")
         random.shuffle(self.cards)
 
+    def dealCard(self):
+        nextCard = self.cards.pop()
+        print("dealing card", nextCard.__repr__())
+        return nextCard
+
     def initSuit(self, suit):
         ''' return 13 cards of specific suit'''
 
