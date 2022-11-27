@@ -14,7 +14,7 @@ class TestBlackJack:
         self.testPlayer = Player("test player", 100)
 
     def test_deck_len(self):
-        assert len(self.testDeck == 52)
+        assert len(self.testDeck) == 52
 
     def test_invalid_wager(self):
-        assert self.testPlayer.makeWager()
+        assert type(self.testPlayer.makeWager()).__name__ == "int"
