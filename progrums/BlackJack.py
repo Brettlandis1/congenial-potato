@@ -32,3 +32,4 @@ elif user_input.lower() == 'bust':
  print('You picked bust!')
 else:
   print('Type stand or bust:')
+  
